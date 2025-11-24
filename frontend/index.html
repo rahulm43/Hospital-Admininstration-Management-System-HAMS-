@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Admin Management System</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.css">
+</head>
+<body>
+  <div id="root">
+    <!-- Navigation will be inserted here -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-brand">
+          <h1>Hospital Admin System</h1>
+        </div>
+        <div class="navbar-menu">
+          <div class="user-info">
+            <span id="userName">Welcome</span>
+            <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container-main">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <ul>
+            <li><a href="#" data-page="dashboard" class="nav-link active">Dashboard</a></li>
+            <li><a href="#" data-page="patients" class="nav-link">Patients</a></li>
+            <li><a href="#" data-page="appointments" class="nav-link">Appointments</a></li>
+            <li><a href="#" data-page="staff" class="nav-link">Staff</a></li>
+            <li><a href="#" data-page="wards" class="nav-link">Wards</a></li>
+            <li><a href="#" data-page="beds" class="nav-link">Beds</a></li>
+            <li><a href="#" data-page="inventory" class="nav-link">Inventory</a></li>
+            <li><a href="#" data-page="billing" class="nav-link">Billing</a></li>
+            <li><a href="#" data-page="reports" class="nav-link">Reports</a></li>
+            <li><a href="#" data-page="settings" class="nav-link">Settings</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="content">
+        <div id="pageContent"></div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Modals -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title"></h2>
+        <span class="modal-close">&times;</span>
+      </div>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Notification -->
+  <div id="notification" class="notification hidden"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/modules/dashboard.js"></script>
+  <script src="assets/js/modules/patients.js"></script>
+  <script src="assets/js/modules/appointments.js"></script>
+  <script src="assets/js/modules/wards.js"></script>
+  <script src="assets/js/modules/beds.js"></script>
+  <script src="assets/js/modules/inventory.js"></script>
+  <script src="assets/js/modules/billing.js"></script>
+  <script src="assets/js/modules/staff.js"></script>
+  <script src="assets/js/modules/reports.js"></script>
+  <script src="assets/js/modules/settings.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
